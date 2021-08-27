@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-/**
- * main - starting point of a program
- *
- * Description: send a-z letters to stdout put
- * Retutn: 0 if works and other for not working
- */
 
+/**
+ * main - starting point of the program
+ *
+ * Description: prints a sample string
+ * Return: 0 if program executes properly, else a non-zero number
+ */
 int main(void)
 {
 	char lcase = 'a';
