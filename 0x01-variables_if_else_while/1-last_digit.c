@@ -1,31 +1,26 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 
 /**
- * main - starting point of the program
+ * main - last digit
  *
- * Description: prints the status of the last digit of n
- * Return: 0 if program executes properly, else a non-zero number
+ * Description: determines last degit's quality
+ * Return: 0 if it works and non for not working
  */
 int main(void)
 {
-	int n;
-	char last_digit;
+	int n, LD;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	last_digit = n % 10;
-
-	if (last_digit == 0)
+	LD = n % 10;
+	if (LD > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, LD);
+	else if (LD == 0)
 		printf("Last digit of %d is 0 and is 0\n", n);
-	else if (last_digit > 5)
-		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
 	else
-		printf(
-			"Last digit of %d is %d and is less than 6 and not 0\n",
-			n, last_digit);
-
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LD);
 	return (0);
 }
