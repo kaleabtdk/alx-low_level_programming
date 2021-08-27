@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * MAIN - STARTING POINT
+ * main - starting point
  * Description: print base16
  * Return: 0 if it work, other if it didn't
  */
