@@ -9,10 +9,12 @@
  */
 int main(void)
 {
-	char lcase = 'a';
+	char lcase = 'a', ucase = 'A';
 
 	for (lcase = 'a'; lcase <= 'z'; lcase++)
 		putchar(lcase);
+	for (ucase = 'A'; ucase <= 'Z'; ucase++)
+		putchar(ucase);
 	putchar('\n');
 	return (0);
 }
