@@ -6,6 +6,7 @@
  * main - last digit
  *
  * Description: determines last digit's quality
+ * Return: 0 if the program works, non for wrong
  */
 int main(void)
 {
