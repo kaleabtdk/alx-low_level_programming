@@ -7,7 +7,7 @@
  * Return: 0 if it work, other if it didn't
  */
 
-int main (void)
+int main(void)
 {
 	int n;
 
