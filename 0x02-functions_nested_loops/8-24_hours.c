@@ -1,27 +1,29 @@
 #include "main.h"
 
 /**
- * jack_bauer - starting func
- * Return: always 0
- */
-
+* jack_bauer - prints every minute of the day
+*
+* Return: no return
+*/
 void jack_bauer(void)
 {
-	int k, l, a, b;
+	int a, b, c, d;
 
-	for (k = '0'; k <= '2'; k++)
+	for (a = 48; a <= 50; a++)
 	{
-		for (l = '0'; l <= '3'; l++)
+		for (b = 48; b <= 57; b++)
 		{
-			for (a = '0'; a <= '5'; a++)
+			for (c = 48; c <= 53; c++)
 			{
-				for (b = '0'; b <= '9'; b++)
+				for (d = 48; d <= 57; d++)
 				{
-					_putchar(k);
-					_putchar(l);
-					_putchar(':');
+					if (a >= 50 && b >= 52)
+					break;
 					_putchar(a);
 					_putchar(b);
+					_putchar(58);
+					_putchar(c);
+					_putchar(d);
 					_putchar('\n');
 				}
 			}
