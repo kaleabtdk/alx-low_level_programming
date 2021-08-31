@@ -1,21 +1,20 @@
 #include "main.h"
 
 /**
-* main - Print the word "Holberton"
-*
-* Return: Always 0 (Success)
-*/
-
+ * use _putchar to print holberton 
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int i;
-	char p[] = "Holberton";
+	char holberton[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+	unsigned int c;
 
-	for (i = 0; i < 9; i++)
-		{
-		_putchar(p[i]);
-		}
-		_putchar('\n');
+	for (c = 0; c < sizeof(holberton); c++)
+	{
+		_putchar(holberton[c]);
+	}
+	_putchar('\n');
 	return (0);
 }
 
