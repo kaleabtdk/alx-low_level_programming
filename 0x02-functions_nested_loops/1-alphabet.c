@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - function starts here
- * Description: prints a-z 
+ * print_alphabet - function starts here
+ * Description: prints a-z
  */
 
 void print_alphabet(void)
@@ -13,4 +13,3 @@ void print_alphabet(void)
 		_putchar(lcase);
 	_putchar('\n');
 }
-
