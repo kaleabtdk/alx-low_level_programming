@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main -starting
+ * print_alphabet_x10 -starting
  * Description: prints a-z 10 times
  */
 
@@ -16,7 +16,7 @@ void print_alphabet_x10(void)
 		{
 			_putchar(c);
 		}
-		{	
+		{
 		_putchar('\n');
 		}
 	}
