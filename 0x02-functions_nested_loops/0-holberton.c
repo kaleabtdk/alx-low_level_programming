@@ -1,20 +1,25 @@
 #include "main.h"
 
 /**
- * main - function to print
+ * main - check the code for ALX School students.
  *
- * Return: 0
+ * Program that prints Holberton, followed by a new line
+ *
+ * Return: always 0 (success)
  */
+
 int main(void)
 {
-	char holberton[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
-	unsigned int c;
+	char s[] = "_putchar";
+	int i = 0;
 
-	for (c = 0; c < sizeof(holberton); c++)
+	while (s[i] != '\0')
 	{
-		_putchar(holberton[c]);
+		_putchar(s[i]);
+		i++;
 	}
-_putchar('\n');
-return (0);
+	_putchar(10);
+
+	return (0);
 }
 
