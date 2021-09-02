@@ -1,37 +1,37 @@
 #include "main.h"
 
 /**
- * print_number - starting function
- * @n: num
- * Return: void
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
-void print_nunmber(int n)
+
+void print_number(int n)
 {
-	int copy, sth, size =1, ones = n % 10;
+	unsigned int i, j, ct;
 
-	n /= 10;
-	copy = n;
-
-	if (ones < 0)
+	if (n < 0)
 	{
-		ones *= -1, copy *= -1, n *= -1;
-		_putchar('-');
+		_putchar(45);
+		i = n * -1;
+	}
+	else
+	{
+		i = n;
 	}
 
-	if (copy > 0)
+	j = i;
+	ct = 1;
+
+	while (j > 9)
 	{
-		while (copy /= 10 != 0)
-		{
-			copy /= 10, size *= 10;
-		}
-		while (size > 0)
-		{
-			sth = n / size;
-			_putchar('0' + sth);
-			n -= sth * size;
-			size /= 10;
-		}
+		j /= 10;
+		ct *= 10;
 	}
-	_putchar('0' + ones);
+
+	for (; ct >= 1; ct /= 10)
+	{
+		_putchar(((i / ct) % 10) + 48);
+	}
 }
 
