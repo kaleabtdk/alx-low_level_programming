@@ -1,15 +1,18 @@
 #include "main.h"
 
 /**
- * mul - starting func
- * @a: integer
- * @b: integer
- * Description: multiplies two integers
- * Return: multiples
+ * print_numbers - starting func
+ * Description: print 0-9
+ * Return: 0
  */
-int mul(int a, int b)
+
+void print_numbers(void)
 {
-	return (a * b);
+	int n;
+
+	for (n = '0'; n <= '9'; n++)
+	{
+		_putchar(n);
+	}
 	_putchar('\n');
 }
-
