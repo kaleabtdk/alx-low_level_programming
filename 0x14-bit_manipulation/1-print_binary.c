@@ -1,13 +1,20 @@
-#include "holberton.h"
+#include "lists.h"
 
 /**
- * print_binary - function that prints the binary representation of a number
- * @n: number to be printed in binary
+ * listint_len - returns the number of elements in
+ * a linked list.
+ * @h: head of a list.
+ *
+ * Return: numbers of nodes.
  */
-void print_binary(unsigned long int n)
+size_t listint_len(const listint_t *h)
 {
-	if (n > 1)
-		print_binary(n >> 1);
+	size_t nnodes = 0;
 
-	_putchar((n & 1) + '0');
+	while (h != NULL)
+	{
+		h = h->next;
+		nnodes++;
+	}
+	return (nnodes);
 }
