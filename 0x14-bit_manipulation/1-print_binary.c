@@ -1,20 +1,51 @@
-#include "lists.h"
+#include "holberton.h"
+#define BIT_SIZE 8
 
 /**
- * listint_len - returns the number of elements in
- * a linked list.
- * @h: head of a list.
- *
- * Return: numbers of nodes.
+ * powX - powers a number b to the p's power
+ * @b : base
+ * @p : power
+ * Return: return b to the power of a
  */
-size_t listint_len(const listint_t *h)
+unsigned long int powX(int b, int p)
 {
-	size_t nnodes = 0;
+	unsigned long int ans = 1;
 
-	while (h != NULL)
+	while (p)
 	{
-		h = h->next;
-		nnodes++;
+		ans *= b;
+		p--;
 	}
-	return (nnodes);
+	return (ans);
 }
+
+/**
+ * print_binary - prints the binary representation of a number
+ * @n: input integer
+ */
+void print_binary(unsigned long int n)
+{
+	unsigned long int test = powX(2, sizeof(unsigned long int) * BIT_SIZE - 1);
+	int start = 0;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	while (test)
+	{
+		if (!(test & n) && start)
+		{
+			_putchar('0');
+		}
+		else if (test & n)
+		{
+			_putchar('1');
+			start = 1;
+		}
+		test = test >> 1;
+	}
+
+}
+
